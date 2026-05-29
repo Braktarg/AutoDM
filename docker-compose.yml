@@ -1,0 +1,25 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/autodm-secret-change-me
+    volumes:
+      - neo4j_data:/data
+
+  # Opcional: Postgres para producción (el backend usa SQLite por defecto).
+  # postgres:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_USER: autodm
+  #     POSTGRES_PASSWORD: autodm
+  #     POSTGRES_DB: autodm
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pg_data:/var/lib/postgresql/data
+
+volumes:
+  neo4j_data: {}

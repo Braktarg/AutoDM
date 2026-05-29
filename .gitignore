@@ -1,0 +1,72 @@
+ARCHITECTURE.md
+AUTODM_DOCUMENTACION_COMPLETA.md
+
+# --- Secretos y entorno local ---
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# --- Python / backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Datos de runtime (BD, RAG, uploads, grafos por mesa)
+backend/data/chroma/*
+!backend/data/chroma/.gitkeep
+backend/data/graphs/*
+!backend/data/graphs/.gitkeep
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+backend/data/**/*.db
+backend/data/**/*.db-journal
+backend/data/**/*.db-wal
+backend/data/**/*.db-shm
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.output/
+frontend/.vinxi/
+frontend/.nitro/
+frontend/.tanstack/
+frontend/.wrangler/
+frontend/.venv/
+*.tsbuildinfo
+
+# --- Logs y caché ---
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# --- IDE y SO ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Cursor / agentes locales ---
+.cursor/
+agent-transcripts/
+
+# --- Build / misc ---
+*.local
+.cache/
